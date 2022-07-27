@@ -3,6 +3,8 @@
 class ProfileStepsController < ApplicationController
   include Wicked::Wizard
 
+  before_action :profile
+
   steps :place, :price, :extras
 
   def show

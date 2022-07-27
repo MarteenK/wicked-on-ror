@@ -1,0 +1,12 @@
+<h1>Price View</h1>
+
+<%= form_with(model: @profile, url: wizard_path, local: true) do |f| %>
+    <%= f.label :min_price %>
+    <%= f.number_field :min_price, min: 1 %>
+
+    <%= f.label :max_price %>
+    <%= f.number_field :max_price, min: 1 %>
+
+    <%= link_to 'Atrás', previous_wizard_path %>
+    <%= f.submit 'Siguiente' %>
+  <% end %>
