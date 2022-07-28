@@ -4,5 +4,7 @@
     <%= f.label :city %>
     <%= f.text_field :city %>
 
+    <%= @profile.errors[:city].join(', ').capitalize %>
+
     <%= f.submit 'Siguiente' %>
   <% end %>

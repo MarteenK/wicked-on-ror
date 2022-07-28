@@ -8,5 +8,9 @@
     <%= f.number_field :max_price, min: 1 %>
 
     <%= link_to 'Atrás', previous_wizard_path %>
+
+    <%= @profile.errors[:min_price].join(', ').capitalize %>
+    <%= @profile.errors[:max_price].join(', ').capitalize %>
+
     <%= f.submit 'Siguiente' %>
   <% end %>
